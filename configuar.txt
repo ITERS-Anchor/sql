@@ -1,0 +1,12 @@
+加到App.config
+1.new
+<connectionStrings>
+    <add name="ConnStr" connectionString="Data Source=localhost;Initial Catalog=dbtest;Integrated Security=True;" providerName="System.Data.SqlClient" />
+  </connectionStrings>
+2.
+<connectionStrings>
+    <add name="ConnStr" connectionString="server=.;database=dbtest;uid=sa;pwd=123"/>
+  </connectionStrings>
+
+用的时候先添加System.configuaration引用
+private static string connStr = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
